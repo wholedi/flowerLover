@@ -1,0 +1,17 @@
+.header {
+  margin-top: 24px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+
+  &__body {
+    display: flex;
+    gap: 32px;
+  }
+}

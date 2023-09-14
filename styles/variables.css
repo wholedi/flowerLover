@@ -3,7 +3,21 @@
   --primary-text: rgba(169, 59, 89, 1);
   --secondary-text: rgba(255, 255, 255, 1);
   --landing: rgba(185, 106, 127, 1);
+  --additional: rgba(201, 161, 172, 1);
   --blue-button: rgba(85, 184, 255, 1);
+  --border-color: rgba(111, 101, 103, 1);
+  --text-size-xxs: 15px;
+  --text-size-xs: 16px;
+  --text-size-s: 18px;
+  --text-size-m: 20px;
+  --text-size-l: 24px;
+  --text-size-xl: 32px;
+  --text-size-xxl: 36px;
+  --text-size-xxxl: 48px;
+  --text-size-xxxxl: 86px;
+  --playfair: "Playfair Display", serif;
+  --source: "Source Sans Pro", sans-serif;
+  --spline: "Spline", sans-serif;
 }
 
 /*# sourceMappingURL=variables.css.map */
