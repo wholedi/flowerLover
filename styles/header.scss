@@ -14,4 +14,11 @@
     display: flex;
     gap: 32px;
   }
+
+  &__link {
+    font-family: var(--source);
+    font-size: var(--text-size-m);
+    font-weight: 400;
+    color: var(--secondary-text);
+  }
 }
