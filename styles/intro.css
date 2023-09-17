@@ -1,0 +1,25 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+.intro__textBlock {
+  color: var(--primary-text);
+}
+.intro__decorBlock {
+  position: relative;
+}
+.intro__img {
+  z-index: 2;
+}
+.intro__decor {
+  position: absolute;
+  width: 485px;
+  height: 481px;
+  border-radius: 485.723px;
+  border: 2px solid var(--primary-text);
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=intro.css.map */

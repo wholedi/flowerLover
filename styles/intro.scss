@@ -1,0 +1,27 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+
+  &__textBlock {
+    color: var(--primary-text)
+  }
+
+  &__decorBlock {
+    position: relative;
+  }
+
+  &__img {
+    z-index: 2;
+  }
+
+  &__decor {
+    position: absolute;
+    width: 485px;
+    height: 481px;
+    border-radius: 485.723px;
+    border: 2px solid var(--primary-text);
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+}
