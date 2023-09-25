@@ -1,17 +1,42 @@
 .intro {
   display: flex;
   justify-content: space-between;
+  position: relative;
+
 
   &__textBlock {
+    padding-top:110px;
     color: var(--primary-text)
   }
 
-  &__decorBlock {
-    position: relative;
+  &__title {
+    font-family: 'Playfair Display',sans-serif;
+    font-size: var(--text-size-xxxl);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 60px;
+
+    &_highlighted {
+      font-family: 'Playfair Display',sans-serif;
+      font-size: var(--text-size-xxxxl);
+      color: var( --secondary-text);
+      font-weight: 400;
+      line-height: 60px;
+      text-transform: uppercase;
+    }
   }
 
-  &__img {
-    z-index: 2;
+  &__titleBlock {
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+    text-align: center;
+  }
+
+  &__decorBlock {
+    position: absolute;
+    right: -100px;
+    top:160px;
   }
 
   &__decor {
@@ -20,8 +45,8 @@
     height: 481px;
     border-radius: 485.723px;
     border: 2px solid var(--primary-text);
-    z-index: 1;
-    top: 0;
-    right: 0;
+    z-index: -1;
+    bottom: 6px;
+    left: -52px;
   }
 }
