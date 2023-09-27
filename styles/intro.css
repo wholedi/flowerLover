@@ -8,14 +8,15 @@
   color: var(--primary-text);
 }
 .intro__title {
-  font-family: "Playfair Display", sans-serif;
+  font-family: var(--playfair);
   font-size: var(--text-size-xxxl);
   font-style: italic;
   font-weight: 500;
   line-height: 60px;
+  z-index: 5;
 }
 .intro__title_highlighted {
-  font-family: "Playfair Display", sans-serif;
+  font-family: var(--playfair);
   font-size: var(--text-size-xxxxl);
   color: var(--secondary-text);
   font-weight: 400;
@@ -27,6 +28,17 @@
   gap: 24px;
   flex-wrap: nowrap;
   text-align: center;
+  margin-left: 110px;
+}
+.intro__subtitle {
+  color: var(--secondary-text);
+  font-family: var(--source);
+  font-size: var(--text-size-l);
+  margin-top: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+  z-index: 5;
+  margin-left: 110px;
 }
 .intro__decorBlock {
   position: absolute;
