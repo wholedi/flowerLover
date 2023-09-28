@@ -1,11 +1,9 @@
 .intro {
-  display: flex;
-  justify-content: space-between;
   position: relative;
 
 
   &__textBlock {
-    padding-top:110px;
+    padding-top: 110px;
     color: var(--primary-text);
   }
 
@@ -13,14 +11,13 @@
     font-family: var(--playfair);
     font-size: var(--text-size-xxxl);
     font-style: italic;
-    font-weight: 500;
     line-height: 60px;
     z-index: 5;
 
     &_highlighted {
       font-family: var(--playfair);
       font-size: var(--text-size-xxxxl);
-      color: var( --secondary-text);
+      color: var(--secondary-text);
       font-weight: 400;
       line-height: 60px;
       text-transform: uppercase;
@@ -29,9 +26,8 @@
 
   &__titleBlock {
     display: flex;
-    gap: 24px;
-    flex-wrap: nowrap;
-    text-align: center;
+    align-items: flex-start;
+    flex-direction: column;
     margin-left: 110px;
   }
 
@@ -43,13 +39,28 @@
     font-weight: 400;
     text-transform: capitalize;
     z-index: 5;
-    margin-left: 110px;
+  }
+
+  &__span {
+    display: flex;
+  }
+
+  &__button {
+    width: 437px;
+    padding: 16px 0;
+    margin-top: 42px;
+    border-radius: 15px;
+    background: var(--primary-text);
+    color: var(--secondary-text);
+    text-transform: uppercase;
+    font-size: var(--text-size-l);
+    font-weight: 400;
   }
 
   &__decorBlock {
     position: absolute;
     right: -100px;
-    top:160px;
+    top: 160px;
   }
 
   &__decor {
@@ -61,5 +72,35 @@
     z-index: -1;
     bottom: 6px;
     left: -52px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    gap: 124px;
+    margin-top: 437px;
+  }
+
+}
+
+.info {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__text {
+    max-width: 230px;
+    font-family: var(--source);
+    font-size: var(--text-size-xs);
+    color: var(--secondary-text);
+    text-align: center;
   }
 }
