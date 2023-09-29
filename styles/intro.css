@@ -48,6 +48,7 @@
   text-transform: uppercase;
   font-size: var(--text-size-l);
   font-weight: 400;
+  z-index: 5;
 }
 .intro__decorBlock {
   position: absolute;
@@ -87,6 +88,11 @@
   font-size: var(--text-size-xs);
   color: var(--secondary-text);
   text-align: center;
+}
+
+.logo__button {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=intro.css.map */
