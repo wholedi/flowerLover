@@ -16,8 +16,8 @@
 
     &_highlighted {
       font-family: var(--playfair);
-      font-size: var(--text-size-xxxxl);
       color: var(--secondary-text);
+      font-size: var(--text-size-xxxxl);
       font-weight: 400;
       line-height: 60px;
       text-transform: uppercase;
@@ -32,7 +32,6 @@
   }
 
   &__subtitle {
-    color: var(--secondary-text);
     font-family: var(--source);
     font-size: var(--text-size-l);
     margin-top: 20px;
@@ -46,12 +45,12 @@
   }
 
   &__button {
+    color: var(--secondary-text);
     width: 437px;
     padding: 16px 0;
     margin-top: 42px;
     border-radius: 15px;
     background: var(--primary-text);
-    color: var(--secondary-text);
     text-transform: uppercase;
     font-size: var(--text-size-l);
     font-weight: 400;
@@ -101,7 +100,6 @@
     max-width: 230px;
     font-family: var(--source);
     font-size: var(--text-size-xs);
-    color: var(--secondary-text);
     text-align: center;
   }
 }
