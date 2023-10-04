@@ -64,6 +64,7 @@
   }
 
   &__decor {
+    opacity: 1;
     position: absolute;
     width: 485px;
     height: 481px;
@@ -109,4 +110,17 @@
     opacity: 0;
     pointer-events: none;
   }
+}
+
+@media (max-width: 1200px) {
+.intro {
+  overflow: hidden;
+
+  &__decorBlock {
+    right: -200px;
+  }
+  &__decor {
+    opacity: 0;
+  }
+}
 }

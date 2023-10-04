@@ -55,6 +55,7 @@
   top: 160px;
 }
 .intro__decor {
+  opacity: 1;
   position: absolute;
   width: 485px;
   height: 481px;
@@ -91,6 +92,18 @@
 .logo__button {
   opacity: 0;
   pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .intro {
+    overflow: hidden;
+  }
+  .intro__decorBlock {
+    right: -200px;
+  }
+  .intro__decor {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=intro.css.map */
