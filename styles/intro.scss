@@ -90,6 +90,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 5;
   }
 
   &__img {
@@ -115,6 +116,22 @@
 @media (max-width: 1200px) {
 .intro {
   overflow: hidden;
+
+  &__title {
+    font-size: var(--text-size-l);
+
+    &_highlighted {
+      font-size: var(--text-size-xxl);
+    }
+  }
+
+  &__titleBlock {
+    margin-left: 10px;
+  }
+
+  &__subtitle {
+    display: none;
+  }
 
   &__decorBlock {
     right: -200px;
