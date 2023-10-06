@@ -18,4 +18,10 @@
   color: var(--secondary-text);
 }
 
+@media (max-width: 992px) {
+  .menu {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=header.css.map */

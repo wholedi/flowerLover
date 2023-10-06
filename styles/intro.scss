@@ -21,6 +21,7 @@
       font-weight: 400;
       line-height: 60px;
       text-transform: uppercase;
+      z-index: 10;
     }
   }
 
@@ -114,8 +115,21 @@
 }
 
 @media (max-width: 1200px) {
-.intro {
-  overflow: hidden;
+  .intro {
+    overflow: hidden;
+
+    &__decorBlock {
+      right: -200px;
+    }
+
+    &__decor {
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+.into {
 
   &__title {
     font-size: var(--text-size-l);
@@ -131,13 +145,6 @@
 
   &__subtitle {
     display: none;
-  }
-
-  &__decorBlock {
-    right: -200px;
-  }
-  &__decor {
-    opacity: 0;
   }
 }
 }
