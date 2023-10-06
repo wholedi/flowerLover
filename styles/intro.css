@@ -19,6 +19,7 @@
   font-weight: 400;
   line-height: 60px;
   text-transform: uppercase;
+  z-index: 10;
 }
 .intro__titleBlock {
   display: flex;
@@ -99,23 +100,25 @@
   .intro {
     overflow: hidden;
   }
-  .intro__title {
-    font-size: var(--text-size-l);
-  }
-  .intro__title_highlighted {
-    font-size: var(--text-size-xxl);
-  }
-  .intro__titleBlock {
-    margin-left: 10px;
-  }
-  .intro__subtitle {
-    display: none;
-  }
   .intro__decorBlock {
     right: -200px;
   }
   .intro__decor {
     opacity: 0;
+  }
+}
+@media (max-width: 992px) {
+  .into__title {
+    font-size: var(--text-size-l);
+  }
+  .into__title_highlighted {
+    font-size: var(--text-size-xxl);
+  }
+  .into__titleBlock {
+    margin-left: 10px;
+  }
+  .into__subtitle {
+    display: none;
   }
 }
 
