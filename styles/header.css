@@ -1,0 +1,27 @@
+.header {
+  margin-top: 24px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__body {
+  display: flex;
+  gap: 32px;
+}
+.menu__link {
+  font-family: var(--source);
+  font-size: var(--text-size-m);
+  font-weight: 400;
+  color: var(--secondary-text);
+}
+
+@media (max-width: 992px) {
+  .menu {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
