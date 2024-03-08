@@ -22,3 +22,9 @@
     color: var(--secondary-text);
   }
 }
+
+@media (max-width: 992px) {
+  .menu {
+    display: none;
+  }
+}
