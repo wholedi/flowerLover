@@ -412,6 +412,7 @@ address {
 }
 
 .catalog {
+  font-family: "Source Sans Pro", sans-serif;
   position: relative;
   margin-bottom: 92px;
   height: 1500px;
@@ -445,11 +446,12 @@ address {
   margin-bottom: 100px;
 }
 
-.select {
+.delivery {
   position: relative;
   z-index: 5;
+  margin-bottom: 50px;
 }
-.select__title {
+.delivery__title {
   font-family: "Playfair Display", sans-serif;
   font-weight: 600;
   font-size: 36px;
@@ -459,11 +461,134 @@ address {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.select__categories {
+.delivery__categories {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  min-width: 190px;
   margin-top: -15px;
-  padding: 20px 25px;
   border-radius: 15px;
   background-color: #B96A7F;
+}
+.delivery__categories > *:not(:last-child) {
+  border-right: 1px solid #444444;
+}
+
+.categories__item {
+  position: relative;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 20px;
+}
+.categories__item--two {
+  grid-column: span 2;
+}
+.categories__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.categories__button::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-top: 7px;
+  background-image: url("../img/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filter {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 140px;
+  padding-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.filter--w2 {
+  width: 300px;
+}
+.filter__list {
+  position: relative;
+  font-weight: 300;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 20px 16px 30px 16px;
+  background-color: rgba(185, 106, 127, 0.5);
+}
+.filter__item {
+  padding: 12px 0;
+  border-bottom: 1px solid #444444;
+}
+.filter__item--mb {
+  margin-bottom: 24px;
+}
+.filter__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.filter__input:focus-visible + .checkbox__label {
+  outline: 1px solid #8A33FD;
+}
+.filter__input:checked + .filter__label::before {
+  background: url("../img/chevron.svg") no-repeat center center;
+}
+.filter__label {
+  display: inline-flex;
+  gap: 11px;
+  cursor: pointer;
+}
+.filter__label::before {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: all 0.3s;
+  content: "";
+  border: 1px solid #F5EBEB;
+  border-radius: 4px;
+}
+.filter__button {
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 200%;
+  text-align: center;
+  background-color: #A93B59;
+  transition: background-color 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .filter__button:hover {
+    background-color: #B96A7F;
+  }
+}
+.filter__button-item {
+  text-align: center;
+}
+.filter__cross {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.filter__cross::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filter-open {
+  visibility: visible;
+  opacity: 1;
 }
 
 .wrapper {

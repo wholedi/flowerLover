@@ -156,6 +156,7 @@
 
 //---------------------
 .catalog {
+  font-family: "Source Sans Pro", sans-serif;
   position: relative;
   margin-bottom: 92px;
   height: 1500px;
@@ -195,9 +196,10 @@
 
 }
 
-.select {
+.delivery {
   position: relative;
   z-index: 5;
+  margin-bottom: 50px;
 
   &__title {
     font-family: "Playfair Display", sans-serif;
@@ -211,9 +213,151 @@
   }
 
   &__categories {
+    display: grid;
+    grid-template-columns:repeat(7, 1fr);
+    min-width: 190px;
     margin-top: -15px;
-    padding: 20px 25px;
     border-radius: 15px;
     background-color: $darkPink;
+
+    > *:not(:last-child) {
+      border-right: 1px solid #444444;
+    }
   }
 }
+
+.categories {
+  &__item {
+    position: relative;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 20px;
+    &--two {
+      grid-column: span 2;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      margin-top: 7px;
+      background-image: url("../img/chevron-down.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.filter {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 140px;
+  padding-top: 20px;
+  opacity:0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  &--w2 {
+    width: 300px;
+  }
+
+  &__list {
+    position: relative;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 20px 16px 30px 16px;
+    background-color: rgba(185, 106, 127, 0.5);
+  }
+
+  &__item {
+    padding: 12px 0;
+    border-bottom: 1px solid #444444;
+
+    &--mb {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:focus-visible + .checkbox__label {
+      outline: 1px solid #8A33FD;
+    }
+
+    &:checked + .filter__label::before {
+      background: url("../img/chevron.svg") no-repeat center center;
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    gap: 11px;
+    cursor: pointer;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: all 0.3s;
+      content: "";
+      border: 1px solid $whiteColor;
+      border-radius: 4px;
+    }
+  }
+
+  &__button {
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 200%;
+    text-align: center;
+    background-color: $pinkColor;
+    transition: background-color 0.3s ease-in-out;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $darkPink;
+      }
+    }
+  }
+
+  &__button-item {
+    text-align: center;
+  }
+
+  &__cross {
+    position: absolute;
+    top:12px;
+    right: 12px;
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/close.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.filter-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+
