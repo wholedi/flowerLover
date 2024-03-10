@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FlowerLover</title>
 
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -80,16 +81,170 @@
                         <h2 class="title__name title__name--mb">Каталог</h2>
                         <div class="title__decor"></div>
                     </div>
-                    <div class="catalog__block-select select">
-                        <h3 class="select__title">Доставка квітів в Києві</h3>
-                        <div class="select__categories">
-                            <div class="select__item-categories item">
-                                <h5 class="item__title">Ціна</h5>
-                                <button class="item__button">
-                                    <img src="img/chevron-down.svg" alt="chevron">
+                    <div class="catalog__block-delivery delivery">
+                        <h3 class="delivery__title">Доставка квітів в Києві</h3>
+                        <ul class="delivery__categories categories">
+                            <li data-filter-index="0" class="categories__item">
+                                <button class="categories__button">
+                                    Ціна
                                 </button>
-                            </div>
-                        </div>
+                                <div class="filter">
+                                    <ul class="filter__list">
+                                        <li class="filter__button-cross">
+                                            <button data-button-index="0" class="filter__cross"></button>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="price-one" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="price-one">< 200</label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="price-two" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="price-two">200 - 500</label>
+                                        </li>
+                                        <li class="filter__item filter__item--mb">
+                                            <input class="filter__input" type="checkbox" id="price-three"
+                                                   name="checkbox" value="">
+                                            <label class="filter__label" for="price-three">> 1000 ₴</label>
+                                        </li>
+                                        <li>
+                                            <button data-button-index="0" class="filter__button">Застосувати</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li data-filter-index="1" class="categories__item categories__item--two">
+                                <button class="categories__button">
+                                    Квіти
+                                </button>
+                                <div class="filter filter--w2">
+                                    <ul class="filter__list">
+                                        <li class="filter__button-cross">
+                                            <button data-button-index="1" class="filter__cross"></button>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="name-one" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="name-one">Троянда</label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="name-two" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="name-two">Еустома</label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="name-three" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="name-three">Хризантема</label>
+                                        </li>
+                                        <li class="filter__item filter__item--mb">
+                                            <input class="filter__input" type="checkbox" id="name-four"
+                                                   name="checkbox" value="">
+                                            <label class="filter__label" for="name-four">Альстромерія</label>
+                                        </li>
+                                        <li class="filter__button-item">
+                                            <button data-button-index="1" class="filter__button">Застосувати</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li data-filter-index="2" class="categories__item">
+                                <button class="categories__button">
+                                    Кому
+                                </button>
+                                <div class="filter">
+                                    <ul class="filter__list">
+                                        <li class="filter__button-cross">
+                                            <button data-button-index="2" class="filter__cross"></button>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="whom-one" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="whom-one">Жінці</label>
+                                        </li>
+                                        <li class="filter__item filter__item--mb">
+                                            <input class="filter__input" type="checkbox" id="whom-three"
+                                                   name="checkbox" value="">
+                                            <label class="filter__label" for="whom-three">Чоловіку</label>
+                                        </li>
+                                        <li>
+                                            <button data-button-index="2" class="filter__button">Застосувати</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li data-filter-index="3" class="categories__item categories__item--two">
+                                <button class="categories__button">
+                                    Привід
+                                </button>
+                                <div class="filter filter--w2">
+                                    <ul class="filter__list">
+                                        <li class="filter__button-cross">
+                                            <button data-button-index="3" class="filter__cross"></button>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="occasion-one" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="occasion-one">День народження</label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="occasion-two" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="occasion-two">Весілля</label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="occasion-three" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="occasion-three">Кохання</label>
+                                        </li>
+                                        <li class="filter__item filter__item--mb">
+                                            <input class="filter__input" type="checkbox" id="occasion-four"
+                                                   name="checkbox" value="">
+                                            <label class="filter__label" for="occasion-four">Співчуваю</label>
+                                        </li>
+                                        <li class="filter__button-item">
+                                            <button data-button-index="3" class="filter__button">Застосувати</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li data-filter-index="4" class="categories__item">
+                                <button data-button-index="4" class="categories__button">
+                                    Стиль
+                                </button>
+                                <div class="filter">
+                                    <ul class="filter__list">
+                                        <li class="filter__button-cross">
+                                            <button class="filter__cross"></button>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="style-one" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="style-one">Вільний</label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="style-two" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="style-two">В коробці</label>
+                                        </li>
+                                        <li class="filter__item">
+                                            <input class="filter__input" type="checkbox" id="style-three" name="checkbox"
+                                                   value="">
+                                            <label class="filter__label" for="style-three">В кошику</label>
+                                        </li>
+                                        <li class="filter__item filter__item--mb">
+                                            <input class="filter__input" type="checkbox" id="style-four"
+                                                   name="checkbox" value="">
+                                            <label class="filter__label" for="style-four">Каскадний</label>
+                                        </li>
+                                        <li>
+                                            <button data-button-index="4" class="filter__button">Застосувати</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
