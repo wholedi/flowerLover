@@ -1,0 +1,154 @@
+@import "variables";
+
+.hero {
+  position: relative;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 94px;
+  @media (max-width: 768px) {
+    margin-bottom: 54px;
+  }
+
+  &__block-info {
+    position: relative;
+    z-index: 5;
+    font-size: 24px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 48px;
+    line-height: 1.25;
+    font-style: italic;
+    font-weight: 500;
+    color: $pinkColor;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 86px;
+      line-height: 70%;
+      text-transform: uppercase;
+      color: $whiteColor;
+      margin-left: 110px;
+
+      @media (max-width: 992px) {
+        margin-left: 0;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-transform: capitalize;
+    margin-left: 110px;
+    margin-bottom: 50px;
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
+  }
+
+  &__decor {
+    height: 410px;
+    margin-bottom: 65px;
+
+    @media (max-width: 992px) {
+      height: 490px;
+      margin-bottom: 75px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    top: 40px;
+
+    @media (max-width: 1300px) {
+      right: -200px
+    }
+
+    @media (max-width: 992px) {
+      top: 90px;
+    }
+
+    @media (max-width: 576px) {
+      top: 120px;
+      right: -300px
+    }
+  }
+
+  &__round-decor {
+    position: absolute;
+    z-index: 3;
+    right: 20%;
+    top: 200px;
+    width: 485px;
+    height: 485px;
+    background-color: transparent;
+    border: 2px solid $pinkColor;
+    border-radius: 485px;
+
+    @media (max-width: 1300px) {
+      display: none;
+    }
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 125px;
+  background-color: $pinkColor;
+  border-radius: 15px;
+  transition: color, background-color 0.3s ease-in-out;
+
+  &--ml {
+    margin-left: 110px;
+
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $pinkColor;
+      background-color: $whiteColor;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 16px;
+    width: 100%;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 124px;
+
+  @media (max-width: 768px) {
+    gap: 60px;
+  }
+
+
+  &__block {
+    font-size: 16px;
+    text-align: center;
+  }
+}

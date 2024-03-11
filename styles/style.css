@@ -77,42 +77,42 @@ address {
 
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/SourceSansPro-Light.woff2") format("woff2"), url("../fonts/SourceSansPro-Light.woff") format("woff");
+  src: url("../fonts/sourceSansPro/SourceSansPro-Light.woff2") format("woff2"), url("../fonts/sourceSansPro/SourceSansPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/SourceSansPro-Regular.woff2") format("woff2"), url("../fonts/SourceSansPro-Regular.woff") format("woff");
+  src: url("../fonts/sourceSansPro/SourceSansPro-Regular.woff2") format("woff2"), url("../fonts/sourceSansPro/SourceSansPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/SourceSansPro-Bold.woff2") format("woff2"), url("../fonts/SourceSansPro-Bold.woff") format("woff");
+  src: url("../fonts/sourceSansPro/SourceSansPro-Bold.woff2") format("woff2"), url("../fonts/sourceSansPro/SourceSansPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
+  src: url("../fonts/playfairDisplay/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/playfairDisplay/PlayfairDisplay-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/PlayfairDisplay-MediumItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-MediumItalic.woff") format("woff");
+  src: url("../fonts/playfairDisplay/PlayfairDisplay-MediumItalic.woff2") format("woff2"), url("../fonts/playfairDisplay/PlayfairDisplay-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-SemiBold.woff") format("woff");
+  src: url("../fonts/playfairDisplay/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/playfairDisplay/PlayfairDisplay-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -415,7 +415,6 @@ address {
   font-family: "Source Sans Pro", sans-serif;
   position: relative;
   margin-bottom: 92px;
-  height: 1500px;
 }
 .catalog__bg {
   position: absolute;
@@ -445,10 +444,15 @@ address {
 .title__name--mb {
   margin-bottom: 100px;
 }
+@media (max-width: 992px) {
+  .title__name--mb {
+    margin-bottom: 50px;
+  }
+}
 
 .delivery {
   position: relative;
-  z-index: 5;
+  z-index: 11;
   margin-bottom: 50px;
 }
 .delivery__title {
@@ -493,7 +497,7 @@ address {
   width: 16px;
   height: 16px;
   margin-top: 7px;
-  background-image: url("../img/chevron-down.svg");
+  background-image: url("../img/catalog/chevron-down.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -517,7 +521,7 @@ address {
   font-size: 18px;
   border-radius: 15px;
   padding: 20px 16px 30px 16px;
-  background-color: rgba(185, 106, 127, 0.5);
+  background-color: #C9A1AC;
 }
 .filter__item {
   padding: 12px 0;
@@ -534,11 +538,8 @@ address {
   height: 0;
   opacity: 0;
 }
-.filter__input:focus-visible + .checkbox__label {
-  outline: 1px solid #8A33FD;
-}
 .filter__input:checked + .filter__label::before {
-  background: url("../img/chevron.svg") no-repeat center center;
+  background: url("../img/catalog/chevron-down.svg") no-repeat center center;
 }
 .filter__label {
   display: inline-flex;
@@ -581,7 +582,7 @@ address {
   content: "";
   width: 16px;
   height: 16px;
-  background-image: url("../img/close.svg");
+  background-image: url("../img/catalog/close.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -589,6 +590,259 @@ address {
 .filter-open {
   visibility: visible;
   opacity: 1;
+}
+
+.product {
+  text-align: center;
+}
+.product__main-title {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 5;
+}
+.product__block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+  column-gap: 75px;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .product__block {
+    column-gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .product__block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 568px) {
+  .product__block {
+    grid-template-columns: 1fr;
+  }
+}
+.product__item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+}
+.product__item > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+.product__img {
+  width: 100%;
+  aspect-ratio: 290/290;
+  object-fit: cover;
+}
+.product__info {
+  text-align: center;
+  color: #000000;
+}
+.product__info > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+.product__price {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 34px;
+}
+.product__span {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: line-through;
+}
+.product__heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+.product__heart img {
+  max-width: 28px;
+  max-height: 28px;
+}
+@media (any-hover: hover) {
+  .product__heart:hover {
+    transform: scale(1.2);
+  }
+}
+.product__title {
+  font-weight: 300;
+  font-size: 16px;
+}
+.product__badge {
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translateX(-50%);
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 22px;
+}
+@media (max-width: 992px) {
+  .product__badge {
+    padding: 6px 10px;
+  }
+}
+.product__badge--icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.product__badge--icon::before {
+  position: relative;
+  z-index: 5;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/product/new.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.product__badge--water {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.product__badge--water::before {
+  position: relative;
+  z-index: 5;
+  content: "";
+  width: 11px;
+  height: 15px;
+  background-image: url("../img/product/tint.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.product__badge--pink {
+  background-color: #A93B59;
+}
+.product__badge--dark-pink {
+  background-color: #B96A7F;
+}
+.product__badge--blue {
+  background-color: #55B8FF;
+}
+.product__button {
+  position: relative;
+  z-index: 10;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 125%;
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .product__button:hover {
+    color: #A93B59;
+    border: 1px solid #A93B59;
+  }
+}
+
+.adaptive-delivery {
+  position: relative;
+  z-index: 11;
+  margin-bottom: 24px;
+}
+.adaptive-delivery__title {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+  background: rgba(185, 106, 127, 0.5);
+  padding: 10px 0;
+}
+.adaptive-delivery__block {
+  border-radius: 0 0 16px 16px;
+  background-color: #B96A7F;
+  padding: 0 16px 16px;
+}
+.adaptive-delivery__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+  font-weight: 300;
+  font-size: 18px;
+}
+.adaptive-delivery__button::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-top: 7px;
+  background-image: url("../img/catalog/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.adaptive-filter__list {
+  margin: 10px 0;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.adaptive-filter__item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.36);
+}
+.adaptive-filter__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.adaptive-filter__input:checked + .adaptive-filter__label::before {
+  background: url("../img/catalog/chevron-down.svg") no-repeat center center;
+}
+.adaptive-filter__label {
+  display: inline-flex;
+  gap: 11px;
+  cursor: pointer;
+}
+.adaptive-filter__label::before {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: all 0.3s;
+  content: "";
+  border: 1px solid #F5EBEB;
+  border-radius: 4px;
+}
+.adaptive-filter__item-button {
+  text-align: center;
+}
+.adaptive-filter__button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 200%;
+  text-align: center;
+  background-color: #A93B59;
+  transition: background-color 0.3s ease-in-out;
+}
+@media (any-hover: hover) {
+  .adaptive-filter__button:hover {
+    background-color: #B96A7F;
+  }
 }
 
 .wrapper {
