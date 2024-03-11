@@ -1,0 +1,494 @@
+@import "variables";
+
+.catalog {
+  font-family: "Source Sans Pro", sans-serif;
+  position: relative;
+  margin-bottom: 92px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1415px;
+    width: 830px;
+    object-fit: cover;
+  }
+}
+
+.title {
+  &__name {
+    position: relative;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: $pinkColor;
+
+    &::after {
+      content: "";
+      width: 591px;
+      position: absolute;
+      height: 1px;
+      top: 100%;
+      left: -41%;
+      background-color: $pinkColor;
+    }
+
+    &--mb {
+      margin-bottom: 100px;
+
+      @media (max-width: 992px) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+}
+
+.delivery {
+  position: relative;
+  z-index: 11;
+  margin-bottom: 50px;
+
+  &__title {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    background-color: rgba(185, 106, 127, 0.5);
+    padding-bottom: 35px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  &__categories {
+    display: grid;
+    grid-template-columns:repeat(7, 1fr);
+    min-width: 190px;
+    margin-top: -15px;
+    border-radius: 15px;
+    background-color: $darkPink;
+
+    > *:not(:last-child) {
+      border-right: 1px solid #444444;
+    }
+  }
+}
+
+.categories {
+  &__item {
+    position: relative;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 20px;
+
+    &--two {
+      grid-column: span 2;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      margin-top: 7px;
+      background-image: url("../img/catalog/chevron-down.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.filter {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 140px;
+  padding-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &--w2 {
+    width: 300px;
+  }
+
+  &__list {
+    position: relative;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 20px 16px 30px 16px;
+    background-color: $lightPink;
+  }
+
+  &__item {
+    padding: 12px 0;
+    border-bottom: 1px solid #444444;
+
+    &--mb {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+
+    &:checked + .filter__label::before {
+      background: url("../img/catalog/chevron-down.svg") no-repeat center center;
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    gap: 11px;
+    cursor: pointer;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: all 0.3s;
+      content: "";
+      border: 1px solid $whiteColor;
+      border-radius: 4px;
+    }
+  }
+
+  &__button {
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 200%;
+    text-align: center;
+    background-color: $pinkColor;
+    transition: background-color 0.3s ease-in-out;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $darkPink;
+      }
+    }
+  }
+
+  &__button-item {
+    text-align: center;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/catalog/close.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.filter-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.product {
+  text-align: center;
+
+  &__main-title {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    column-gap: 75px;
+    margin-bottom: 20px;
+
+    @media (max-width: 992px) {
+      column-gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 568px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+
+    > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 290/290;
+    object-fit: cover;
+  }
+
+  &__info {
+    text-align: center;
+    color: $blackColor;
+
+    > *:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__price {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 34px;
+  }
+
+  &__span {
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: line-through;
+  }
+
+  &__heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: transform 0.3s ease-in-out;
+
+    img {
+      max-width: 28px;
+      max-height: 28px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  &__badge {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    font-family: "Source Sans Pro", sans-serif;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 22px;
+    @media (max-width: 992px) {
+      padding: 6px 10px;
+    }
+
+    &--icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        position: relative;
+        z-index: 5;
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-image: url("../img/product/new.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &--water {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        position: relative;
+        z-index: 5;
+        content: "";
+        width: 11px;
+        height: 15px;
+        background-image: url("../img/product/tint.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &--pink {
+      background-color: $pinkColor;
+    }
+
+    &--dark-pink {
+      background-color: $darkPink;
+    }
+
+    &--blue {
+      background-color: $blueColor;
+    }
+  }
+
+  &__button {
+    position: relative;
+    z-index: 10;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 125%;
+    padding: 15px 30px;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $pinkColor;
+        border: 1px solid $pinkColor;
+      }
+    }
+  }
+}
+
+.adaptive-delivery {
+  position: relative;
+  z-index: 11;
+  margin-bottom: 24px;
+
+  &__title {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+    background: rgba(185, 106, 127, 0.5);
+    padding: 10px 0;
+  }
+
+  &__block {
+    border-radius: 0 0 16px 16px;
+    background-color: $darkPink;
+    padding: 0 16px 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-weight: 300;
+    font-size: 18px;
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      margin-top: 7px;
+      background-image: url("../img/catalog/chevron-down.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.adaptive-filter {
+  &__list {
+    margin: 10px 0;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  &__item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.36);
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked + .adaptive-filter__label::before {
+      background: url("../img/catalog/chevron-down.svg") no-repeat center center;
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    gap: 11px;
+    cursor: pointer;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: all 0.3s;
+      content: "";
+      border: 1px solid $whiteColor;
+      border-radius: 4px;
+    }
+  }
+
+  &__item-button {
+    text-align: center;
+  }
+
+  &__button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 200%;
+    text-align: center;
+    background-color: $pinkColor;
+    transition: background-color 0.3s ease-in-out;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $darkPink;
+      }
+    }
+  }
+}
