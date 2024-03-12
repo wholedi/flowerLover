@@ -4,6 +4,7 @@
 @import "header";
 @import "hero";
 @import "catalog";
+@import "quality";
 
 .wrapper {
   min-height: 100%;
@@ -32,6 +33,7 @@
 body {
   color: $whiteColor;
   background-color: $blackColor;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .scrollbar {
