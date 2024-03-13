@@ -3,8 +3,20 @@
 .quality {
   margin-bottom: 132px;
 
+  @media (max-width: 991px) {
+    margin-bottom: 50px;
+  }
+
   &__block-title {
     text-align: right;
+  }
+
+  &__body {
+    @media (max-width: 1200px) {
+      > *:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &__block {
@@ -15,15 +27,18 @@
 
     @media (max-width: 1200px) {
       gap: 50px;
+
     }
     @media (max-width: 991px) {
       flex-direction: column;
+      gap: 20px;
     }
 
-    &--reverse{
+    &--reverse {
       flex-direction: row-reverse;
       @media (max-width: 991px) {
         flex-direction: column;
+        gap: 20px;
       }
     }
   }

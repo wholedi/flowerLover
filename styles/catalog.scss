@@ -4,14 +4,21 @@
   font-family: "Source Sans Pro", sans-serif;
   position: relative;
   margin-bottom: 92px;
+}
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 1415px;
-    width: 830px;
-    object-fit: cover;
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1415px;
+  width: 830px;
+  object-fit: cover;
+  border-radius: 0 448px 448px 0;
+
+  &--left {
+    left: 0;
+    transform: scaleX(-1);
+    border-radius:  448px 0 0 448px;
   }
 }
 

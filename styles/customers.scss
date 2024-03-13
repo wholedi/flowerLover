@@ -1,0 +1,28 @@
+@import "variables";
+
+.customers {
+  margin-bottom: 124px;
+
+  &__slider {
+    position: relative;
+  }
+
+  &__img {
+    aspect-ratio: 325/358 ;
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: 100;
+    transform: translateY(-50%);
+    top: 50%;
+
+    &--left {
+      left: 0;
+
+    }
+    &--right {
+      right: 0;
+    }
+  }
+}
