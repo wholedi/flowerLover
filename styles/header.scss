@@ -2,8 +2,8 @@
 
 .header {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100px;
   background-color: $blackColor;
@@ -28,12 +28,17 @@
       min-height: 70px;
     }
   }
+}
 
-  &__logo {
-    position: relative;
-    z-index: 10;
-    max-width: 126px;
-    max-height: 63px;
+.logo {
+  position: relative;
+  z-index: 10;
+  max-width: 126px;
+  max-height: 63px;
+
+  &--big {
+    max-width: 264px;
+    max-height: 137px;
   }
 }
 

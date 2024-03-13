@@ -132,3 +132,44 @@ let slideUp = (target, duration = 500) => {
 let slideToggle = (target, duration = 500) => {
     target.hidden ? slideDown(target, duration) : slideUp(target, duration)
 }
+
+const customersSlider = document.querySelector('.customers');
+
+if (customersSlider) {
+    new Swiper('.customers__swiper', {
+        // Optional parameters
+        loop: true,
+        autoHeight: true,
+        speed: 800,
+        spaceBetween: 18,
+        slidesPerView: 4,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.customers__arrow--right',
+            prevEl: '.customers__arrow--left',
+        },
+
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1.5,
+                spaceBetween: 18
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 18
+            },
+            // when window width is >= 480px
+            650: {
+                slidesPerView: 3,
+                spaceBetween: 18
+            },
+            // when window width is >= 640px
+            991: {
+                slidesPerView: 4,
+                spaceBetween: 18
+            }
+        }
+    });
+}

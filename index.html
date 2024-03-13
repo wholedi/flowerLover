@@ -7,13 +7,14 @@
 
     <link rel="shortcut icon" href="img/global/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 <div class="scrollbar">
     <div class="wrapper">
         <header class="header header--mb">
             <div class="header__container">
-                <img class="header__logo" src="img/global/logo.svg" alt="FLOWERLOVER">
+                <img class="logo" src="img/global/logo.svg" alt="FLOWERLOVER">
                 <nav class="menu">
                     <div class="menu__body">
                         <ul class="menu__list">
@@ -75,7 +76,7 @@
                 </div>
             </section>
             <section class="catalog">
-                <img class="catalog__bg" src="img/catalog/bg-catalog.webp" alt="flower">
+                <img class="background" src="img/catalog/bg-catalog.webp" alt="flower">
                 <div class="catalog__small-container">
                     <div class="title__block">
                         <h2 class="title__name title__name--mb">Каталог</h2>
@@ -521,9 +522,169 @@
                     </div>
                 </div>
             </section>
+            <section class="choice">
+                <img class="background background--left" src="img/catalog/bg-catalog.webp" alt="flower">
+                <div class="choice__container">
+                    <h2 class="title__name title__name--mb">Не можете визначитись з вибором букету?</h2></div>
+                <div class="choice__body">
+                    <div class="choice__container choice__container--flex">
+                        <div class="choice__form">
+                            <h4 class="choice__title">
+                                <span>Відправте заявку</span>
+                                і Вам зателефонують
+                                протягом однієї хвилини</h4>
+                            <form class="form" action="#" method="GET">
+                                <div class="form__info-block">
+                                    <label class="form__label" for="name"></label>
+                                    <input name="name" type="text" required id="name" class="form__input" value=""
+                                           placeholder="Ім’я">
+                                    <img class="form__icon" src="img/choice/name.svg" alt="user">
+                                </div>
+                                <div class="form__info-block">
+                                    <label class="form__label" for="number"></label>
+                                    <input name="name" type="text" required id="number" class="form__input" value=""
+                                           placeholder="Телефон">
+                                    <img class="form__icon" src="img/choice/phone.svg" alt="phone">
+                                </div>
+                                <button type="submit" class="form__button">
+                                    Залишити заявку
+                                </button>
+                            </form>
+                        </div>
+                        <div class="choice__info">
+                            <h4 class="choice__title">Наш менеджер телефоном:</h4>
+                            <ul class="choice__list">
+                                <li class="choice__item">
+                                    <p>
+                                        <span>Відповість</span> на будь-які запитання
+                                    </p>
+                                </li>
+                                <li class="choice__item">
+                                    <p>
+                                        <span>Підбере рішення</span> відповідно
+                                        до ваших запитів та бажань
+                                    </p>
+                                </li>
+                                <li class="choice__item">
+                                    <p>
+                                        <span>Підготує унікальну пропозицію</span>
+                                        та детально розповість Вам про наші букети
+                                    </p>
+                                </li>
+                                <li class="choice__item">
+                                    <p>
+                                        <span>Оформить</span> для Вас подарунок-сюрприз
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="customers">
+                <div class="customers__container">
+                    <div class="customers__swiper swiper">
+                        <div class="customers__slider swiper-wrapper">
+                            <div class="customers__slide swiper-slide">
+                                <img src="img/customers/1.webp" alt="customers">
+                            </div>
+                            <div class="customers__slide swiper-slide">
+                                <img class="customers__img" src="img/customers/2.webp" alt="customers">
+                            </div>
+                            <div class="customers__slide swiper-slide">
+                                <img class="customers__img" src="img/customers/3.webp" alt="customers">
+                            </div>
+                            <div class="customers__slide swiper-slide">
+                                <img class="customers__img" src="img/customers/4.webp" alt="customers">
+                            </div>
+                            <div class="customers__slide swiper-slide">
+                                <img src="img/customers/1.webp" alt="customers">
+                            </div>
+                            <div class="customers__slide swiper-slide">
+                                <img class="customers__img" src="img/customers/2.webp" alt="customers">
+                            </div>
+                            <div class="customers__slide swiper-slide">
+                                <img class="customers__img" src="img/customers/3.webp" alt="customers">
+                            </div>
+                            <div class="customers__slide swiper-slide">
+                                <img class="customers__img" src="img/customers/4.webp" alt="customers">
+                            </div>
+                        </div>
+                        <button class="customers__arrow customers__arrow--left">
+                            <img src="img/customers/arrow-left.svg" alt="left">
+                        </button>
+                        <button class="customers__arrow customers__arrow--right">
+                            <img src="img/customers/arrow-right.svg" alt="right">
+                        </button>
+                    </div>
+                </div>
+            </section>
         </main>
+        <footer class="footer">
+            <div class="footer__small-container">
+                <div class="footer__left">
+                    <div class="footer__menu">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Головна</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Каталог</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Відгуки</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Як замовити</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__center">
+                    <img class="logo logo--big" src="img/global/logo-big.svg" alt="FLOWERLOVER">
+                    <ul class="footer__social social">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <img src="img/social/phone.svg" alt="phone">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <img src="img/social/inst.svg" alt="instagf">
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <img src="img/social/f.svg" alt="facebook">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <address class="footer__right">
+                    <ul class="footer__address address">
+                        <li class="address__item">
+                            <a class="address__link" href="tel:+380977775577">+38097 777 55 77</a>
+                            <h5 class="address__title">Наш телефон</h5>
+                        </li>
+                        <li class="address__item">
+                            <a class="address__link" href="mailto:info@floverlover.ua">info@floverlover.ua</a>
+                            <h5 class="address__title">Контактний е-mail</h5>
+                        </li>
+                        <li class="address__item">
+                            <h4 class="address__city">Київ</h4>
+                            <a class="address__link" href="#">вул. Маріупольська, 14.</a>
+                            <h5 class="address__title">Наш магазин</h5>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </footer>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
