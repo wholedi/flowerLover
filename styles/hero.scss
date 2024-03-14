@@ -4,7 +4,6 @@
   margin-top: 100px;
   padding-top: 50px;
   position: relative;
-  font-family: "Source Sans Pro", sans-serif;
   margin-bottom: 94px;
   @media (max-width: 768px) {
     margin-bottom: 54px;
@@ -85,8 +84,12 @@
       top: 90px;
     }
 
+    @media (max-width: 678px) {
+      top: 150px;
+    }
+
     @media (max-width: 576px) {
-      top: 120px;
+      top: 170px;
       right: -300px
     }
   }

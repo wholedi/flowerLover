@@ -7,10 +7,6 @@
     margin-bottom: 50px;
   }
 
-  &__block-title {
-    text-align: right;
-  }
-
   &__body {
     @media (max-width: 1200px) {
       > *:not(:last-child) {

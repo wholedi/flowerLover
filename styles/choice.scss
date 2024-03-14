@@ -3,7 +3,6 @@
 .choice {
   position: relative;
   margin-bottom: 121px;
-  height: 1500px;
 
   @media (max-width: 991px) {
     margin-bottom: 50px;
@@ -27,6 +26,7 @@
   &__body {
     position: relative;
     z-index: 20;
+    margin: 0 -15px;
     padding: 36px 0 86px;
     background: rgba(185, 106, 127, 0.7);
   }
