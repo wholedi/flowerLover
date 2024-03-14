@@ -1,74 +1,8 @@
 @import "variables";
 
 .catalog {
-  font-family: "Source Sans Pro", sans-serif;
   position: relative;
   margin-bottom: 92px;
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 1415px;
-  width: 830px;
-  object-fit: cover;
-  border-radius: 0 448px 448px 0;
-
-  &--left {
-    left: 0;
-    transform: scaleX(-1);
-    border-radius:  448px 0 0 448px;
-  }
-}
-
-.title {
-  &__name {
-    position: relative;
-    font-family: "Playfair Display", sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    color: $pinkColor;
-    @media (max-width: 320px) {
-      font-size: 28px;
-    }
-
-    &::after {
-      content: "";
-      width: 591px;
-      position: absolute;
-      height: 1px;
-      top: 100%;
-      left: -41%;
-      background-color: $pinkColor;
-    }
-
-    &--mb {
-      margin-bottom: 100px;
-
-      @media (max-width: 992px) {
-        margin-bottom: 50px;
-      }
-    }
-
-    &--big {
-      &::after {
-        width: 830px;
-        left: 78%;
-
-        @media (max-width: 992px) {
-          left: 50%;
-        }
-        @media (max-width: 687px) {
-          left: 30%;
-        }
-        @media (max-width: 576px) {
-          left: 0;
-        }
-      }
-    }
-  }
-
 }
 
 .delivery {
@@ -300,7 +234,6 @@
   }
 
   &__price {
-    font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 34px;
   }
@@ -339,7 +272,6 @@
     left: 50%;
     bottom: 150px;
     transform: translateX(-50%);
-    font-family: "Source Sans Pro", sans-serif;
     text-transform: uppercase;
     padding: 6px 20px;
     font-weight: 600;
