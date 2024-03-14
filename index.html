@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,10 +77,10 @@
             </section>
             <section class="catalog">
                 <img class="background" src="img/catalog/bg-catalog.webp" alt="flower">
-                <div class="catalog__small-container">
+                <div class="catalog__small-container title">
                     <div class="title__block">
                         <h2 class="title__name title__name--mb">Каталог</h2>
-                        <div class="title__decor"></div>
+                        <div class="title__decor title__decor--catalog"></div>
                     </div>
                     <div class="catalog__block-delivery delivery">
                         <h3 class="delivery__title">Доставка квітів в Києві</h3>
@@ -479,9 +479,10 @@
                 </div>
             </section>
             <section class="quality">
-                <div class="quality__container">
-                    <div class="quality__block-title">
-                        <h2 class="title__name  title__name--mb title__name--big">Якість в деталях</h2>
+                <div class="quality__container title">
+                    <div class="title__block title__block--right">
+                        <h2 class="title__name title__name--mb">Якість в деталях</h2>
+                        <div class="title__decor title__decor--quality"></div>
                     </div>
                     <div class="quality__body">
                         <article class="quality__block">
@@ -523,88 +524,90 @@
                 </div>
             </section>
             <section class="choice">
-                <img class="background background--left" src="img/catalog/bg-catalog.webp" alt="flower">
-                <div class="choice__container">
-                    <h2 class="title__name title__name--mb">Не можете визначитись з вибором букету?</h2></div>
-                <div class="choice__body">
-                    <div class="choice__container choice__container--flex">
-                        <div class="choice__form">
-                            <h4 class="choice__title">
-                                <span>Відправте заявку</span>
-                                і Вам зателефонують
-                                протягом однієї хвилини</h4>
-                            <form class="form" action="#" method="GET">
-                                <div class="form__info-block">
-                                    <label class="form__label" for="name"></label>
-                                    <input name="name" type="text" required id="name" class="form__input" value=""
-                                           placeholder="Ім’я">
-                                    <img class="form__icon" src="img/choice/name.svg" alt="user">
-                                </div>
-                                <div class="form__info-block">
-                                    <label class="form__label" for="number"></label>
-                                    <input name="name" type="text" required id="number" class="form__input" value=""
-                                           placeholder="Телефон">
-                                    <img class="form__icon" src="img/choice/phone.svg" alt="phone">
-                                </div>
-                                <button type="submit" class="form__button">
-                                    Залишити заявку
-                                </button>
-                            </form>
-                        </div>
-                        <div class="choice__info">
-                            <h4 class="choice__title">Наш менеджер телефоном:</h4>
-                            <ul class="choice__list">
-                                <li class="choice__item">
-                                    <p>
-                                        <span>Відповість</span> на будь-які запитання
-                                    </p>
-                                </li>
-                                <li class="choice__item">
-                                    <p>
-                                        <span>Підбере рішення</span> відповідно
-                                        до ваших запитів та бажань
-                                    </p>
-                                </li>
-                                <li class="choice__item">
-                                    <p>
-                                        <span>Підготує унікальну пропозицію</span>
-                                        та детально розповість Вам про наші букети
-                                    </p>
-                                </li>
-                                <li class="choice__item">
-                                    <p>
-                                        <span>Оформить</span> для Вас подарунок-сюрприз
-                                    </p>
-                                </li>
-                            </ul>
+                <img class="background background--left" src="img/customers/bg.webp" alt="flower">
+                <div class="choice__container title">
+                    <div class="title__block">
+                        <h2 class="title__name title__name--mb">Не можете визначитись з вибором букету?</h2>
+                        <div class="title__decor title__decor--choice"></div>
+                    </div>
+                    <div class="choice__body">
+                        <div class="choice__container choice__container--flex">
+                            <div class="choice__form">
+                                <h4 class="choice__title">
+                                    <span>Відправте заявку</span>
+                                    і Вам зателефонують
+                                    протягом однієї хвилини</h4>
+                                <form class="form" action="#" method="GET">
+                                    <div class="form__info-block">
+                                        <label class="form__label" for="name"></label>
+                                        <input name="name" type="text" required id="name" class="form__input" value=""
+                                               placeholder="Ім’я">
+                                        <img class="form__icon" src="img/choice/name.svg" alt="user">
+                                    </div>
+                                    <div class="form__info-block">
+                                        <label class="form__label" for="number"></label>
+                                        <input name="name" type="text" required id="number" class="form__input" value=""
+                                               placeholder="Телефон">
+                                        <img class="form__icon" src="img/choice/phone.svg" alt="phone">
+                                    </div>
+                                    <button type="submit" class="form__button">
+                                        Залишити заявку
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="choice__info">
+                                <h4 class="choice__title">Наш менеджер телефоном:</h4>
+                                <ul class="choice__list">
+                                    <li class="choice__item">
+                                        <p>
+                                            <span>Відповість</span> на будь-які запитання
+                                        </p>
+                                    </li>
+                                    <li class="choice__item">
+                                        <p>
+                                            <span>Підбере рішення</span> відповідно
+                                            до ваших запитів та бажань
+                                        </p>
+                                    </li>
+                                    <li class="choice__item">
+                                        <p>
+                                            <span>Підготує унікальну пропозицію</span>
+                                            та детально розповість Вам про наші букети
+                                        </p>
+                                    </li>
+                                    <li class="choice__item">
+                                        <p>
+                                            <span>Оформить</span> для Вас подарунок-сюрприз
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="customers">
-                <div class="customers__container">
-                    <div class="customers__swiper swiper">
-                        <div class="customers__slider swiper-wrapper">
+                <div class="customers__container title">
+                    <div class="title__block title__block--right">
+                        <h2 class="title__name title__name--mb">Наші клієнти</h2>
+                        <div class="title__decor title__decor--customers"></div>
+                    </div>
+                    <div class="customers__slider swiper">
+                        <div class="customers__wrapper swiper-wrapper">
                             <div class="customers__slide swiper-slide">
-                                <img src="img/customers/1.webp" alt="customers">
-                            </div>
-                            <div class="customers__slide swiper-slide">
-                                <img class="customers__img" src="img/customers/2.webp" alt="customers">
-                            </div>
-                            <div class="customers__slide swiper-slide">
-                                <img class="customers__img" src="img/customers/3.webp" alt="customers">
+                                <img class="customers__img" src="img/customers/4.webp" alt="customers">
                             </div>
                             <div class="customers__slide swiper-slide">
                                 <img class="customers__img" src="img/customers/4.webp" alt="customers">
                             </div>
                             <div class="customers__slide swiper-slide">
-                                <img src="img/customers/1.webp" alt="customers">
+                                <img class="customers__img" src="img/customers/4.webp" alt="customers">
                             </div>
                             <div class="customers__slide swiper-slide">
-                                <img class="customers__img" src="img/customers/2.webp" alt="customers">
+                                <img class="customers__img" src="img/customers/4.webp" alt="customers">
                             </div>
                             <div class="customers__slide swiper-slide">
-                                <img class="customers__img" src="img/customers/3.webp" alt="customers">
+                                <img class="customers__img" src="img/customers/4.webp" alt="customers">
                             </div>
                             <div class="customers__slide swiper-slide">
                                 <img class="customers__img" src="img/customers/4.webp" alt="customers">

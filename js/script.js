@@ -136,7 +136,7 @@ let slideToggle = (target, duration = 500) => {
 const customersSlider = document.querySelector('.customers');
 
 if (customersSlider) {
-    new Swiper('.customers__swiper', {
+    new Swiper('.customers__slider', {
         // Optional parameters
         loop: true,
         autoHeight: true,
